@@ -124,6 +124,16 @@ section.texto2{
     align-content: space-around;
 }
 
+.carousel{
+    width: 500px;
+    margin-left: 375px;
+}
+
+
+
+
+
+
 /* metodos de extraccion */
 .descripcion2{
     font-size: x-large;
