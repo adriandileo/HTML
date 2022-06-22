@@ -14,39 +14,19 @@
 {
 /* pantalla */
 /* generico */
-// .logo{
-//     width: 150px;
-    
-// }
-// .menu{
-//     color: aliceblue;
-// }
+$estilo:(
+    color:indigo 
+);
 
 
-
-
-// nav {
-//     position: relative;
-// }
-// nav ul li {
-//     display: inline-block ;
-//     margin-inline: 40px;
-//     text-align: center;
-    
-// }
-// nav ul li a {
-//     font-size: x-large;
-//     background-color: black;
-//     text-decoration: none;
-//     font-family: 'Dancing Script', cursive;
-    
-// }
 header{
-
+    border: 2px solid map-get($estilo , color );
     nav{
         position: relative;
+        
         .logo{
-            width: 150px;
+            // width: 150px;
+            @include size  (150px,auto);
         }
         ul{
             li{
@@ -93,44 +73,56 @@ text-decoration: none;
 z-index: 100;
 position: fixed;
 border-radius: 8px;
-width: 40px;
-height: 30px;
+@include size  (30px,30px);
+// width: 40px;
+// height: 30px;
 text-align: center;
 }
 
 /* index */
-#texto{
-    display: grid;
-    
-}
 
-#grids{
-    display: grid;
-    grid-template-areas: 
-    "imagen1"  "texto1" 
+
+
+
+
+
+
+
+
+
+
+ #texto{
+     display: grid;
     
-    "texto2" "imagen2";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 350px;
-}
+ }
+
+ #grids{
+     display: grid;
+     grid-template-areas: 
+     "imagen1"  "texto1" 
+    
+     "texto2" "imagen2";
+     grid-template-columns: 50% 50%;
+     grid-template-rows: 350px;
+ }
 
 /* areas */
-section.img1{
-    grid-area: imagen1;
-}
-section.texto1{
+ section.img1{
+     grid-area: imagen1;
+ }
+ section.texto1{
     grid-area: texto1;
-}
-section.img2{
-    grid-area: imagen2;
+ }
+ section.img2{
+     grid-area: imagen2;
 
-}
-section.texto2{
-    grid-area: texto2;
-    text-align: center;
-}
+ }
+ section.texto2{
+     grid-area: texto2;
+     text-align: center;
+ }
 .home{
-    border: solid indigo;
+    border: solid map-get($estilo , color );
 }
 .auto{
     width: 350px;
@@ -165,11 +157,18 @@ section.texto2{
 
 
 /* metodos de extraccion */
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
 .descripcion2{
     font-size: x-large;
     text-align: center;
     align-content: space-around;
-    width: 500px;
+    // width: 500px;
+    @include size  (500px,auto);
     margin-left: 350px; 
 }
 #contenedorMetodos{
@@ -178,13 +177,14 @@ section.texto2{
 
 }
 .metodos{
-    width: 200px;
-    height: 200px;
+    // width: 200px;
+    // height: 200px;
+    @include size  (200px,200px);
     margin-left: 60px;
     
 }
 #chemex , #aeropress , #magister , #prensaFrancesa{
-    border: solid indigo;
+    border: solid map-get($estilo , color );
 }
 
 
@@ -193,7 +193,7 @@ section.texto2{
 
 .dulces{
     border-style: solid;
-    border-color: indigo;
+    border-color: map-get($estilo , color );
     padding: 30px;
 }
 .descripcion{
@@ -210,11 +210,12 @@ section.texto2{
     font-weight: bolder;
     padding-bottom: 50px;
     border-style: solid;
-    border-color: indigo;
+    border-color: map-get($estilo , color );
     text-align: center;
 }
 .sweet{
-    width: 300px;
+    // width: 300px;
+    @include size  (300px,auto);
 
 }
     
@@ -228,11 +229,21 @@ section.texto2{
     text-align: center;
 }
 
+//extend
+.boton1{
+    width: 150px;
+}
+.boton2{
+    @extend .boton1
+}
 
+.boton3{
+    @extend .boton1
+}
 /* footer */
 footer{
 
-    border: solid indigo;
+    border: solid map-get($estilo , color );
     width: auto;
     height: 100px;
     
@@ -257,6 +268,8 @@ footer{
 }
 
 }
+
+
 
 
 

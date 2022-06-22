@@ -9,6 +9,9 @@
 @media (min-width: 769px) {
   /* pantalla */
   /* generico */
+  header {
+    border: 2px solid indigo;
+  }
   header nav {
     position: relative;
   }
@@ -165,6 +168,10 @@
   /* contacto */
   #form {
     text-align: center;
+  }
+
+  .boton1, .boton3, .boton2 {
+    width: 150px;
   }
 
   /* footer */
