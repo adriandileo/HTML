@@ -25,8 +25,8 @@ header{
         position: relative;
         
         .logo{
-            // width: 150px;
-            @include size  (150px,auto);
+            width: 150px;
+
         }
         ul{
             li{
@@ -73,9 +73,8 @@ text-decoration: none;
 z-index: 100;
 position: fixed;
 border-radius: 8px;
-@include size  (30px,30px);
-// width: 40px;
-// height: 30px;
+width: 40px;
+height: 30px;
 text-align: center;
 }
 
@@ -112,6 +111,7 @@ text-align: center;
  }
  section.texto1{
     grid-area: texto1;
+    text-align: center;
  }
  section.img2{
      grid-area: imagen2;

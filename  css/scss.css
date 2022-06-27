@@ -74,6 +74,7 @@
 
   section.texto1 {
     grid-area: texto1;
+    text-align: center;
   }
 
   section.img2 {
@@ -116,6 +117,7 @@
     text-align: center;
     align-content: space-around;
     width: 500px;
+    height: auto;
     margin-left: 350px;
   }
 
@@ -163,6 +165,7 @@
 
   .sweet {
     width: 300px;
+    height: auto;
   }
 
   /* contacto */
