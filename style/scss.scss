@@ -90,43 +90,45 @@ text-align: center;
 
 
 
- #texto{
-     display: grid;
-    
- }
+
 
  #grids{
-     display: grid;
+    display: grid;
      grid-template-areas: 
-     "imagen1"  "texto1" 
-    
-     "texto2" "imagen2";
-     grid-template-columns: 50% 50%;
-     grid-template-rows: 350px;
+     "imagen" 
+     "imagen2" "texto2"
+       ;
+     grid-template-columns: repeat(2, 50% );
+     grid-template-rows: repeat(2, 350px);
+     grid-auto-flow: row;
+     align-items: center;
  }
-
 /* areas */
- section.img1{
-     grid-area: imagen1;
+ .img1{
+     grid-area: imagen;
+     height: 350px;
  }
- section.texto1{
-    grid-area: texto1;
-    text-align: center;
- }
- section.img2{
+//  .texto1{
+//     grid-area: texto1;
+//     width: 492px;
+//     text-align: center;
+//  }
+ .img2{
      grid-area: imagen2;
+     height: 350px;
 
  }
- section.texto2{
-     grid-area: texto2;
-     text-align: center;
- }
-.home{
-    border: solid map-get($estilo , color );
-}
-.auto{
-    width: 350px;
-    
+//  .texto2{
+//      grid-area: texto2;
+//      text-align: center;
+//  }
+
+// .home{
+//     border: solid map-get($estilo , color );
+// }
+.auto , .auto1{
+    width: 492px;
+    height: 330px;
 }
 
 
